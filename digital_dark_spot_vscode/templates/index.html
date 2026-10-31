@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Dark Spot | Research Gap Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark">DS</div>
+    <div>
+      <div class="brand-name">DIGITAL DARK SPOT</div>
+      <div class="brand-subtitle">AI-assisted information gap detection</div>
+    </div>
+    <div class="team-tag">SANKET </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">RESEARCH WITH MORE CLARITY</p>
+      <h1>Find what’s missing.<br><span>Know what to verify.</span></h1>
+      <p class="hero-copy">Compare source material, finds possible gaps, and build a checklist to tell what to do next.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">STEP 1</p>
+          <h2>Your research goal</h2>
+        </div>
+        <span class="step-pill">Input</span>
+      </div>
+      <label for="question">What do you want to find out?</label>
+      <textarea id="question" rows="3" placeholder="Example: What should I verify before applying for this scholarship?"></textarea>
+      <div class="helper">Tip: ask a specific question, such as “What are the eligibility rules, deadline, and required documents?”</div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">STEP 2</p>
+          <h2>Add source material</h2>
+        </div>
+        <button class="button button-secondary" id="addSource" type="button">＋ Add source</button>
+      </div>
+      <p class="helper top-helper">Paste text from webpages or documents you are allowed to use. A URL is saved as a reference; this starter app does not automatically fetch webpages.</p>
+      <div id="sources">
+        <div class="source-card">
+          <div class="source-card-top">
+            <strong>Source 1</strong>
+            <button type="button" class="remove-source" aria-label="Remove source" title="Remove source">×</button>
+          </div>
+          <label>Source title</label>
+          <input class="source-title" type="text" placeholder="e.g., Official scholarship guidelines">
+          <label>Source URL (optional)</label>
+          <input class="source-url" type="url" placeholder="https://example.org/guidelines">
+          <label>Paste source text</label>
+          <textarea class="source-content" rows="5" placeholder="Paste relevant text here. Include dates and requirements if available."></textarea>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="button button-primary" id="analyzeBtn" type="button">Analyze sources <span>→</span></button>
+        <button class="button button-quiet" id="loadExample" type="button">Load example</button>
+        <button class="button button-quiet" id="clearBtn" type="button">Clear</button>
+      </div>
+      <p class="status" id="status" role="status"></p>
+    </section>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <div class="results-title">
+        <div>
+          <p class="eyebrow">ANALYSIS REPORT</p>
+          <h2>Your research overview</h2>
+        </div>
+        <span class="step-pill">Preliminary</span>
+      </div>
+      <div class="summary-box" id="summary"></div>
+      <div class="stats-grid" id="stats"></div>
+
+      <div class="result-section">
+        <h3>Potential information gaps</h3>
+        <div id="gaps" class="result-list"></div>
+      </div>
+      <div class="result-section">
+        <h3>Possible conflicting claims</h3>
+        <div id="conflicts" class="result-list"></div>
+      </div>
+      <div class="result-section">
+        <h3>Source freshness warnings</h3>
+        <div id="freshness" class="result-list"></div>
+      </div>
+      <div class="result-section">
+        <h3>What to verify next</h3>
+        <ol id="checklist" class="checklist"></ol>
+      </div>
+      <div class="result-section">
+        <h3>Sources reviewed</h3>
+        <div id="sourceList" class="result-list"></div>
+      </div>
+      <div class="method-note" id="methodNote"></div>
+    </section>
+
+    <footer>
+      <span>Digital Dark Spot · sanket</span>
+      <span>Prototype v0.1 ·</span>
+    </footer>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+:root {
+  --navy: #172d47;
+  --blue: #2b6797;
+  --teal: #21918c;
+  --ink: #293747;
+  --muted: #687787;
+  --line: #dce5eb;
+  --paper: #ffffff;
+  --soft: #f4f8fb;
+  --pale: #eaf3f8;
+  --gold: #b77916;
+  --red: #b94b4b;
+  --green: #267d61;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: #f6f8fb; }
+.topbar {
+  display: flex; align-items: center; gap: 13px; padding: 17px max(22px, calc((100% - 1120px)/2));
+  background: var(--paper); border-bottom: 1px solid var(--line);
+}
+.brand-mark { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 12px; background: var(--navy); color: white; font-weight: 800; letter-spacing: -1px; }
+.brand-name { color: var(--navy); font-size: 14px; font-weight: 850; letter-spacing: .08em; }
+.brand-subtitle { color: var(--muted); font-size: 12px; margin-top: 3px; }
+.team-tag { margin-left: auto; color: var(--blue); background: var(--pale); border-radius: 999px; padding: 8px 13px; font-size: 12px; font-weight: 750; }
+.container { width: min(100% - 32px, 1000px); margin: 0 auto; }
+.hero { padding: 48px 8px 32px; }
+.eyebrow { color: var(--teal); font-size: 10px; letter-spacing: .15em; font-weight: 850; margin: 0 0 9px; }
+h1 { color: var(--navy); font-size: clamp(34px, 5vw, 55px); letter-spacing: -.045em; line-height: 1.05; margin: 0; }
+h1 span { color: var(--teal); }
+.hero-copy { color: var(--muted); max-width: 650px; line-height: 1.65; font-size: 16px; margin-top: 18px; }
+.panel { background: white; border: 1px solid var(--line); border-radius: 18px; padding: 25px; margin-bottom: 18px; box-shadow: 0 5px 20px rgba(25, 50, 75, .035); }
+.section-heading, .results-title { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 20px; }
+h2 { color: var(--navy); font-size: 23px; margin: 0; letter-spacing: -.025em; }
+h3 { color: var(--navy); font-size: 17px; margin: 0 0 13px; }
+.step-pill { border: 1px solid #c9e3e2; background: #eff9f8; color: #167773; border-radius: 999px; padding: 7px 11px; font-size: 11px; font-weight: 800; }
+label { display: block; color: var(--navy); font-size: 12px; font-weight: 750; margin: 15px 0 7px; }
+input, textarea { width: 100%; font: inherit; color: var(--ink); background: #fff; border: 1px solid #d6e0e8; border-radius: 10px; padding: 12px 13px; outline: none; transition: border .15s, box-shadow .15s; }
+textarea { resize: vertical; line-height: 1.5; }
+input:focus, textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px rgba(33,145,140,.12); }
+input::placeholder, textarea::placeholder { color: #9aa7b2; }
+.helper { color: var(--muted); font-size: 12px; line-height: 1.55; margin-top: 8px; }
+.top-helper { margin-top: -10px; margin-bottom: 12px; }
+.button { border: 0; border-radius: 10px; padding: 12px 16px; font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; transition: transform .12s, opacity .12s; }
+.button:hover { transform: translateY(-1px); }
+.button:disabled { opacity: .55; cursor: wait; transform: none; }
+.button-primary { color: white; background: var(--navy); }
+.button-primary span { color: #9ce0d9; margin-left: 9px; font-size: 17px; }
+.button-secondary { color: var(--navy); background: var(--pale); border: 1px solid #d6e5ee; }
+.button-quiet { color: var(--muted); background: transparent; border: 1px solid var(--line); }
+.source-card { border: 1px solid var(--line); border-radius: 13px; padding: 16px; margin-top: 12px; background: #fcfdfe; }
+.source-card-top { display: flex; justify-content: space-between; align-items: center; color: var(--navy); font-size: 13px; }
+.remove-source { border: 0; background: #fbeeee; color: var(--red); width: 28px; height: 28px; border-radius: 8px; font-size: 20px; cursor: pointer; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.status { color: var(--red); font-size: 13px; margin: 12px 0 0; }
+.results { margin: 28px 0; }
+.hidden { display: none; }
+.summary-box { border: 1px solid #cfe2eb; background: #eef6fa; border-radius: 13px; padding: 17px; line-height: 1.6; font-size: 14px; }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0 24px; }
+.stat { background: white; border: 1px solid var(--line); border-radius: 13px; padding: 16px; }
+.stat-number { color: var(--navy); font-size: 26px; font-weight: 850; }
+.stat-label { color: var(--muted); font-size: 11px; margin-top: 4px; }
+.result-section { margin: 22px 0; }
+.result-list { display: grid; gap: 10px; }
+.result-card { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 15px; }
+.result-card.gap { border-left: 4px solid var(--gold); }
+.result-card.conflict { border-left: 4px solid var(--red); }
+.result-card.freshness { border-left: 4px solid var(--blue); }
+.result-card.source { border-left: 4px solid var(--teal); }
+.result-card strong { display: block; color: var(--navy); font-size: 13px; margin-bottom: 6px; }
+.result-card p { margin: 5px 0; font-size: 13px; line-height: 1.55; overflow-wrap: anywhere; }
+.source-ref { color: var(--blue); font-size: 11px; overflow-wrap: anywhere; }
+.empty-state { color: var(--muted); background: white; border: 1px dashed var(--line); border-radius: 12px; padding: 15px; font-size: 13px; }
+.checklist { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px 16px 40px; }
+.checklist li { padding: 5px 0 5px 3px; font-size: 13px; line-height: 1.5; }
+.method-note { background: #fff8e9; color: #795719; border: 1px solid #f1dfb5; padding: 14px; border-radius: 12px; font-size: 12px; line-height: 1.6; }
+footer { display: flex; justify-content: space-between; gap: 12px; padding: 26px 4px 40px; color: #84919e; font-size: 10px; }
+@media (max-width: 650px) {
+  .topbar { padding: 14px 16px; }
+  .brand-name { font-size: 11px; }
+  .team-tag { font-size: 10px; padding: 7px 9px; }
+  .hero { padding-top: 34px; }
+  .panel { padding: 18px; }
+  .stats-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; }
+  .section-heading { align-items: flex-start; }
+}
