@@ -24,9 +24,9 @@ This is **prototype v0.1**. The current analysis is rule-based, not a trained AI
 
 2. Install dependencies:
 
-   ```bash
+ ```bash
   pip install -r requirements.txt
-   ```
+ ```
 
    For codespaces write
 
