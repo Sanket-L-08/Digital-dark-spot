@@ -25,20 +25,35 @@ This is **prototype v0.1**. The current analysis is rule-based, not a trained AI
 2. Install dependencies:
 
    ```bash
-   pip install -r requirements.txt
+  pip install -r requirements.txt
    ```
+   For codespaces write
 
-3. Start the server:
+   ```bash 
+   cd /workspaces/Digital-dark-spot/digital_dark_spot_vscode
+   ```
+Later
+
+    ```bash
+    python3 -m pip install -r requirements.txt
+    ```
+
+4. Start the server:
 
    ```bash
    python app.py
-   ```
+    ```
+   For codespaces write
 
-4. Open this address in your browser:
+    ```bash
+   python3 app.py
+    ```
+
+6. Open this address in your browser:
 
    http://127.0.0.1:5000
 
-5. Click **Load example**, then **Analyze sources** to test the interface.
+7. Click **Load example**, then **Analyze sources** to test the interface.
 
 ## Project structure
 
