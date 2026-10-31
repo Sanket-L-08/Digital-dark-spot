@@ -27,6 +27,7 @@ This is **prototype v0.1**. The current analysis is rule-based, not a trained AI
    ```bash
   pip install -r requirements.txt
    ```
+
    For codespaces write
 
    ```bash 
@@ -43,6 +44,7 @@ Later
    ```bash
    python app.py
     ```
+   
    For codespaces write
 
     ```bash
